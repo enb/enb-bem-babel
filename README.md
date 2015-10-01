@@ -1,5 +1,7 @@
 # enb-bem-babel
 
+[![NPM version](https://img.shields.io/npm/v/enb-bem-babel.svg?style=flat)](https://www.npmjs.org/package/enb-bem-babel)
+
 Available technologies:
 
 - bem-babel

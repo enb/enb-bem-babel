@@ -1,7 +1,7 @@
 var vow = require('vow'),
     webpack = require('webpack');
 
-modules.exports = require('enb/lib/build-flow').create()
+module.exports = require('enb/lib/build-flow').create()
     .name('bem-babel')
     .target('target', '?.browser.js')
     .useFileList(['vanilla.js', 'js', 'browser.js'])

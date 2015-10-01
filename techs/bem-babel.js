@@ -1,4 +1,5 @@
 var fs = require('fs'),
+    path = require('path'),
     vow = require('vow'),
     webpack = require('webpack');
 

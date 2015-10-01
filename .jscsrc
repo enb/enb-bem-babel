@@ -1,0 +1,10 @@
+{
+  "plugins": ["jscs-bem"],
+  "preset": "bem",
+
+  "excludeFiles": [
+    ".git/**",
+    "node_modules/**"
+  ],
+  "fileExtensions": [".js"]
+}

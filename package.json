@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "jscs .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vladimir Varankin <nek.narqo@gmail.com> (http://github.com/narqo)",
@@ -21,6 +22,8 @@
     "enb": ">= 0.8.22"
   },
   "devDependencies": {
-    "enb": "^1.0.0"
+    "enb": "^1.0.0",
+    "jscs": "^2.2.1",
+    "jscs-bem": "^0.2.0"
   }
 }

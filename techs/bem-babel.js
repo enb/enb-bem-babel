@@ -1,4 +1,5 @@
-var vow = require('vow'),
+var fs = require('fs'),
+    vow = require('vow'),
     webpack = require('webpack');
 
 module.exports = require('enb/lib/build-flow').create()

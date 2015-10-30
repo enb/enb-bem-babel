@@ -45,7 +45,8 @@ module.exports = require('enb/lib/build-flow').create()
     .name('bem-babel')
     .target('target', '?.browser.js')
     .useFileList(['vanilla.js', 'js', 'browser.js'])
-    .builder(function(files) {
+    .useSourceFilename('bemhtmlFile', '')
+    .builder(function(files, bemhtmlFile) {
         var node = this.node,
             target = this._target,
             targetDir = node.getDir(),
@@ -57,7 +58,12 @@ module.exports = require('enb/lib/build-flow').create()
                 preWebpackPath,
                 files.map(function(file) {
                         return 'import \'bem-source:' + node.relativePath(file.fullname) + '\';';
-                }, node).join('\n'))
+                }, node).join('\n') +
+                    (bemhtmlFile?
+                        'require(\'ym\').define(' +
+                            '\'BEMHTML\',' +
+                            'function(provide) { provide(require(\'' + bemhtmlFile + '\').BEMHTML) });' :
+                        ''))
             .then(function() {
                 return runWebpack(preWebpackPath, targetDir, target);
             })

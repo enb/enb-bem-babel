@@ -11,7 +11,7 @@ Available technologies:
 Install the package:
 
 ~~~
-$ npm instal --save-dev enb-bem-babel
+$ npm install --save-dev enb-bem-babel
 ~~~
 
 Add the tech to your project's `make.js`
